@@ -1,0 +1,3504 @@
+/* 3.1.Terreno
+Fazer um programa para ler as medidas da largura e comprimento de um terreno
+retangular com uma casa decimal, bem como o valor do metro quadrado do
+terreno com duas casas decimais. Em seguida, o programa deve mostrar o
+valor da área do terreno, bem como o valor do preço do terreno, ambos com
+duas casas decimais.*/
+
+
+#include <stdio.h>
+#include <stdlib.h>
+
+int main()
+{
+    double largura, comprimento, valorMetroQuadrado, areaTerreno, valorTerreno;
+
+    printf("Informe a largura do terreno: ");
+    scanf ("%lf", &largura);
+    printf("Informe o comprimento do terreno: ");
+    scanf ("%lf", &comprimento);
+    printf("Agora informe o valor do metro quadrado: ");
+    scanf ("%lf", &valorMetroQuadrado);
+
+    areaTerreno = largura * comprimento;
+    valorTerreno = areaTerreno * valorMetroQuadrado;
+
+    printf("\nA area total do terreno tem %.2lf metros quadrados e o valor total deste terreno e de R$ %.2lf\n", areaTerreno, valorTerreno );
+
+    return 0;
+}
+
+//
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* 3.2.Retangulo
+Fazer um programa para ler as medidas da base e altura de um retângulo.
+Em seguida, mostrar o valor da área, perímetro e diagonal deste retângulo,
+com quatro casas decimais.*/
+
+
+#include <stdio.h>
+#include <stdlib.h>
+
+int main()
+{
+    double base, altura, area, perimetro, diagonal;
+
+    printf("Base do retangulo: ");
+    scanf ("%lf", &base);
+    printf("Altura do retangulo: ");
+    scanf ("%lf", &altura);
+
+    area = base * altura;
+    perimetro = 2*(base+altura);
+    diagonal = sqrt(pow (base,2)+ pow (altura,2));
+
+    printf("\nArea do retangulo = %.4lf", area);
+    printf("\nPerimetro do retangulo = %.4lf", perimetro);
+    printf("\nE a Diagonal do retangulo = %.4lf\n", diagonal);
+
+    return 0;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* 3.3.Idade
+Fazer um programa para ler o nome e idade de duas pessoas.
+Ao final mostrar uma mensagem com os nomes e a idade média entre essas
+pessoas, com uma casa decimal.*/
+
+
+
+#include <stdio.h>
+#include <stdlib.h>
+
+int main()
+{
+    char nome1[50], nome2[50];
+    int idade1, idade2;
+    double media;
+
+    printf("Informe os dados da primeira pessoa:\n");
+    printf("Nome: ");
+    gets(nome1);
+    printf("Idade: ");
+    scanf("%d", &idade1);
+
+    printf("Informe os dados da segunda pessoa:\n");
+    printf("Nome: ");
+    fseek(stdin, 0, SEEK_END);
+    gets(nome2);
+    printf("Idade: ");
+    scanf("%d", &idade2);
+
+    media = (double) (idade1 + idade2)/2;
+
+    printf("\nA idade media de %s e %s e de %.1lf anos.\n", nome1, nome2, media);
+
+    return 0;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* 3.4.Soma
+Fazer um programa para ler dois valores inteiros X e Y, e depois mostrar
+na tela o valor da soma destes números.*/
+
+
+#include <stdio.h>
+#include <stdlib.h>
+
+int main()
+{
+    int x, y, soma;
+
+    printf("Digite o valor de X: ");
+    scanf("%d", &x);
+
+    printf("Digite o valor de Y: ");
+    scanf("%d", &y);
+
+    soma = x + y;
+
+    printf("SOMA = %d\n", soma);
+
+    return 0;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*3.5.Troco
+Fazer um programa para calcular o troco no processo de pagamento de um
+produto de uma mercearia. O programa deve ler o preço unitário do produto,
+a quantidade de unidades compradas deste produto, e o valor em dinheiro
+dado pelo cliente (suponha que haja dinheiro suficiente). Seu programa
+deve mostrar o valor do troco a ser devolvido ao cliente.*/
+
+
+#include <stdio.h>
+#include <stdlib.h>
+
+int main()
+{
+    double valorProduto, dinheiroRecebido, troco;
+    int qtdadeProduto;
+
+    printf("Informe o valor unitario do produto: ");
+    scanf("%lf", &valorProduto);
+    printf("Informe a quantidade vendida desse produto: ");
+    scanf("%d", &qtdadeProduto);
+    printf("Insira o valor recebido: ");
+    scanf("%lf", &dinheiroRecebido);
+
+    troco = dinheiroRecebido - (valorProduto * qtdadeProduto);
+
+    printf("\nTROCO RS %.2lf\n", troco);
+    return 0;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*3.6.Circulo
+Fazer um programa para ler o valor "r" do raio de um circulo, e depois
+mostrar o valor da area do circulo com tres casas decimais. A formula da
+area do circulo e a seguinte: ........ = ... ..... Voce pode usar o valor
+de .. fornecido pela biblioteca da sua linguagem de programacao, ou entao,
+se preferir, use diretamente o valor 3.14159.*/
+
+#include <stdio.h>
+#include <stdlib.h>
+
+int main()
+{
+    double r, area;
+
+    printf("Informe o raio do circulo para o calculo da area: ");
+    scanf("%lf", &r);
+
+    area = 3.14159 * pow(r,2);
+
+    printf("\nO circulo de raio %lf tem area de %.3lf\n", r, area);
+
+    return 0;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* 3.7.Pagamento
+Fazer um programa para ler o nome de um(a) funcionário(a), o valor que
+ele(a) recebe por hora, e a quantidade de horas trabalhadas por ele(a).
+Ao final, mostrar o valor do pagamento do funcionário com uma mensagem
+explicativa, conforme exemplo.*/
+
+
+
+#include <stdio.h>
+#include <stdlib.h>
+
+int main()
+{
+    char nome[50];
+    double valorHora, pagamento;
+    int qtdadeHoras;
+
+    printf("Informe o nome do funcionario(a): ");
+    gets(nome);
+    printf("Informe o valor de sua hora de trabalho: ");
+    scanf("%lf", &valorHora);
+    printf("Informe a quantidade de horas trabalhadas: ");
+    scanf("%d", &qtdadeHoras);
+
+    pagamento = valorHora * qtdadeHoras;
+
+    printf("\n%s, trabalhou %d horas e recebera RS %.2lf de pagamento.\n", nome, qtdadeHoras, pagamento);
+
+    return 0;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* 3.8.Consumo
+Fazer um programa para ler a distância total (em km) percorrida por um
+carro, bem como o total de combustível gasto por este carro ao percorrer
+tal distância. Seu programa deve mostrar o consumo médio do carro, com
+três casas decimais.*/
+
+
+#include <stdio.h>
+#include <stdlib.h>
+
+int main()
+{
+    int kmInicial, kmFinal, distanciaPercorrida;
+    double combustivel, litrosFinal, combustivelUtilizado, consumo;
+
+    printf("Informe a quilometragem inicial, se nao souber informe zero: ");
+    scanf("%d", &kmInicial);
+    printf("Informe a quilometragem final, se nao souber informe a quilometragem total: ");
+    scanf("%d", &kmFinal);
+
+    printf("\nInforme a quantidade de litros de combustivel abastecido se nao souber informe zero: ");
+    scanf("%lf", &combustivel);
+    printf("Sobrou combustivel no tanque?\n");
+    printf("Se nao sobrou insira 0, senao informe o total de litros que restou: ");
+    scanf("%lf", &litrosFinal);
+
+    distanciaPercorrida = kmFinal - kmInicial;
+    combustivelUtilizado = combustivel - litrosFinal;
+    consumo = distanciaPercorrida / combustivelUtilizado;
+
+    printf("\nA distancia percorrida foi: %d Km.\n", distanciaPercorrida);
+    printf("Total de combustivel utilizado: %.2lf litros.\n", combustivelUtilizado);
+    printf("E o consumo medio de combustivel foi de: %.3lf litros por Km.\n", consumo);
+
+    return 0;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* 3.9.Medidas
+Fazer um programa para ler três medidas A, B e C. Em seguida, calcular e
+mostrar (imprimir os dados com quatro casas decimais):
+a) a área do quadrado que tem lado A
+b) a área do triângulo retângulo que base A e altura B
+c) a área do trapézio que tem bases A e B, e altura C. */
+
+
+#include <stdio.h>
+#include <stdlib.h>
+
+int main()
+{
+    double a, b, c, areaq, areato, areata;
+
+    printf("Digite a medida A: ");
+    scanf("%lf", &a);
+    printf("Digite a medida B: ");
+    scanf("%lf", &b);
+    printf("Digite a medida C: ");
+    scanf("%lf", &c);
+
+    areaq = a * a;
+    areato = (a * b) / 2;
+    areata = ((a + b) * c) / 2;
+
+    printf("\nArea total do Quadrado: %.4lf\n", areaq);
+    printf("Area total do Triangulo Retangulo: %.4lf\n", areato);
+    printf("Area total do Triangulo Trapezio: %.4lf\n", areata);
+
+    return 0;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* 3.10.Duração
+Fazer um programa para ler uma duração de tempo em segundos,
+daí imprimir na tela esta duração no formato horas:minutos:segundos. */
+
+
+#include <stdio.h>
+#include <stdlib.h>
+
+int main()
+{
+    int s, m1, hora, minuto, segundo;
+
+    printf("Digite a duracao em segundos: ");
+    scanf("%d", &s);
+
+    hora = s / 3600;
+    m1 = s % 3600;
+    minuto = m1 / 60;
+    segundo = s % 60;
+
+    printf("\n %d:%d:%d\n", hora, minuto, segundo);
+
+    return 0;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* 4.1.Notas
+Fazer um programa para ler as duas notas que um aluno obteve no primeiro e
+segundo semestres de uma disciplina anual. Em seguida, mostrar a nota final
+que o aluno obteve (com uma casa decimal) no ano juntamente com um texto
+explicativo. Caso a nota final do aluno seja inferior a 60.00, mostrar a
+mensagem "REPROVADO". */
+
+
+#include <stdio.h>
+#include <stdlib.h>
+
+int main()
+{
+    double n1, n2, media;
+
+    printf("Informe a primeira nota: ");
+    scanf("%lf", &n1);
+    printf("Informe a segunda nota: ");
+    scanf("%lf", &n2);
+
+    media = n1 + n2;
+
+    printf("\nNOTA FINAL: %.1lf\n", media);
+
+    if (media < 60.00){
+        printf("\nREPROVADO!\n");
+    }
+
+    return 0;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* 4.2.Bhaskara
+Fazer um programa para ler os três coeficientes de uma equação do
+segundo grau. Usando a fórmula de Bhaskara, calcular e mostrar os valores
+das raízes x1 e x2 da equação com quatro casas decimais.
+Se a equação não possuir raízes reais, mostrar uma mensagem. */
+
+
+#include <stdio.h>
+#include <stdlib.h>
+
+int main()
+{
+    double a, b, c, delta, x1, x2;
+
+    printf("Informe o Coeficiente a: ");
+    scanf("%lf", &a);
+    printf("Informe o Coeficiente b: ");
+    scanf("%lf", &b);
+    printf("Informe o Coeficiente c: ");
+    scanf("%lf", &c);
+
+    delta = (pow(b,2))-(4*a*c);
+
+    if (a == 0 || delta < 0){
+        printf("\nEsta equacao nao possui raizes.\n");
+    }
+    else{
+         x1 = (-b + sqrt(delta)) / (2 * a);
+         x2 = (-b - sqrt(delta)) / (2 * a);
+
+         printf("\nX1 = %.4lf", x1);
+         printf("\nX2 = %.4lf\n", x2);
+    }
+
+    return 0;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* 4.3.Menor de tres
+Fazer um programa para ler três números inteiros. Em seguida, mostrar qual
+o menor dentre os três números lidos. Em caso de empate, mostrar apenas
+ uma vez. */
+
+
+#include <stdio.h>
+#include <stdlib.h>
+
+int main()
+{
+    int v1, v2, v3;
+
+    printf("Digite o primeiro numero: ");
+    scanf("%d", &v1);
+    printf("Digite o segundo numero: ");
+    scanf("%d", &v2);
+    printf("Digite o terceiro numero: ");
+    scanf("%d", &v3);
+
+    if (v1 < v2 && v1 < v3){
+        printf("\nMENOR = %d\n", v1);
+    }
+    else if (v2 < v3){
+        printf("\nMENOR = %d\n", v2);
+    }
+    else {
+        printf("\nMENOR = %d\n", v3);
+    }
+
+    return 0;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* 4.4.Operadora
+Uma operadora de telefonia cobra R$ 50.00 por um plano básico que dá
+direito a 100 minutos de telefone. Cada minuto que exceder a franquia de
+100 minutos custa R$ 2.00. Fazer um programa para ler a quantidade de
+minutos que uma pessoa consumiu, daí mostrar o valor a ser pago. */
+
+
+#include <stdio.h>
+#include <stdlib.h>
+
+int main()
+{
+    double minutos, valor;
+
+    printf("Informe a quantidade de minutos consumidos: ");
+    scanf("%lf", &minutos);
+
+    if (minutos > 100){
+        valor = ((minutos - 100) * 2) + 50;
+    }
+    else {
+        valor = 50;
+    }
+
+   printf("\nValor a pagar: RS %.2lf\n", valor);
+
+    return 0;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* 4.5.Troco Verificado
+Fazer um programa para calcular o troco no processo de pagamento de um
+produto de uma mercearia. O programa deve ler o preço unitário do produto,
+a quantidade de unidades compradas deste produto, e o valor em dinheiro
+dado pelo cliente. Seu programa deve mostrar o valor do troco a ser
+devolvido ao cliente. Se o dinheiro dado pelo cliente não for suficiente,
+mostrar uma mensagem informando o valor restante. */
+
+
+#include <stdio.h>
+#include <stdlib.h>
+
+int main()
+{
+    double preco, quantidade, total, valorRecebido, troco;
+
+    printf("Digite o preco unitario do produto: ");
+    scanf("%lf", &preco);
+    printf("Informe a quantidade: ");
+    scanf("%lf", &quantidade);
+
+    total = preco * quantidade;
+
+    printf("Total da venda RS: %.2lf\n", total);
+
+    printf("\nInsira o total do dinheiro recebido: ");
+    scanf("%lf", &valorRecebido);
+
+    if (valorRecebido >= total){
+        troco = valorRecebido - total;
+        printf("\nTROCO RS: %.2lf\n", troco);
+    }
+    else{
+        troco = total - valorRecebido;
+        printf("\nDINHEIRO INSUFICIENTE! FALTAM %.2lf REAIS\n", troco);
+    }
+
+    return 0;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* 4.6.Glicose
+Fazer um programa para ler a quantidade de glicose no sangue de uma pessoa
+e depois mostrar na tela a classificação desta glicose de acordo com
+a tabela de referência ao lado. Classificação Glicose:
+Normal = Até 100 mg/dl
+Elevado = Maior que 100 até 140 mg/dl
+Diabetes = Maior de 140 mg/dl */
+
+
+#include <stdio.h>
+#include <stdlib.h>
+
+int main()
+{
+    double glicose;
+
+    printf("Informe a medida da glicose: ");
+    scanf("%lf", &glicose);
+
+    if (glicose <= 100){
+        printf("\nNivel Normal.\n");
+    }
+    else if (glicose <= 140){
+        printf("\nNivel Elevado.\n");
+    }
+    else{
+        printf("\nDIABETES!\n");
+    }
+
+    return 0;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* 4.7.Dardo
+No arremesso de dardo, o atleta tem três chances para lançar o dardo à
+maior distância que conseguir. Você deve criar um programa para, dadas
+as medidas das três tentativas de lançamento, informar qual foi a maior. */
+
+
+#include <stdio.h>
+#include <stdlib.h>
+
+int main()
+{
+    double d1, d2, d3;
+
+    printf("Digite tres distancias: \n");
+    scanf("%lf", &d1);
+    scanf("%lf", &d2);
+    scanf("%lf", &d3);
+
+    if (d1 >= d2 && d1 >= d3){
+        printf("\nMaior Distancia: %.2lf\n", d1);
+    }
+    else if ( d2 >= d3){
+        printf("\nMaior Distancia: %.2lf\n", d2);
+    }
+    else{
+        printf("\nMaior Distancia: %.2lf\n", d3);
+    }
+
+    return 0;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* 4.8.Temperatura
+Deseja-se converter uma medida de temperatura da escala Celsius para
+Fahrenheit ou vice-versa. Para isso, você deve construir um programa que
+leia a letra "C" ou "F" indicando em qual escala vai ser informada uma
+temperatura. Em seguida o programa deve mostrar a temperatura na outra
+escala com duas casas decimais. A seguir é dada a fórmula para converter
+de Fahrenheit para Celsius (você deve deduzir a fórmula de Celsius para
+Fahrenheit): (32) 95 C   F. */
+
+
+#include <stdio.h>
+#include <stdlib.h>
+
+int main()
+{
+    char escala;
+    double temperatura, conversao;
+
+    printf("Você ira informar a temperatura em Celsius ou Fahrenheit?\n");
+    fseek(stdin,0,SEEK_END);
+    printf("Digite C para Celsius ou F para Fahrenheit: ");
+    scanf("%c", &escala);
+
+    if (escala == 'C' || escala == 'c'){
+        printf("\nInforme a temperatura: ");
+        scanf("%lf", &temperatura);
+        conversao = (temperatura * 9 / 5) + 32;
+        printf("\nTemperatura equivalente em Fahreinheit: %.2lf\n", conversao);
+    }
+    else if (escala == 'F' || escala == 'f'){
+        printf("\nInforme a temperatura: ");
+        scanf("%lf", &temperatura);
+        conversao = (temperatura - 32) * 5 / 9;
+        printf("\nTemperatura equivalente em Celsius: %.2lf\n", conversao);
+    }
+    else {
+        printf("\nEscala incorreta!\n", conversao);
+    }
+    return 0;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* 4.9.Lanchonete
+Uma lanchonete possui vários produtos. Cada produto possui um código e um
+preço. Você deve fazer um programa para ler o código e a quantidade
+comprada de um produto (suponha um código válido), e daí informar qual
+o valor a ser pago, com duas casas decimais, conforme tabela de produtos
+ao lado.
+Código do produto 	Preço do produto
+       1           	R$ 5.00
+       2            	R$ 3.50
+       3	            R$ 4.80
+       4             	R$ 8.90
+       5              R$ 7.32 
+*/
+
+
+#include <stdio.h>
+#include <stdlib.h>
+
+int main()
+{
+    int codigo, quantidade;
+    double total;
+
+    printf("Digite o codigo do produto vendido: ");
+    scanf("%d", &codigo);
+    printf("Digite a quantidade vendida: ");
+    scanf("%d", &quantidade);
+
+    switch(codigo){
+        case 1:
+        total = 5.00 * quantidade;
+        break;
+
+        case 2:
+        total = 3.50 * quantidade;
+        break;
+
+        case 3:
+        total = 4.80 * quantidade;
+        break;
+
+        case 4:
+        total = 8.90 * quantidade;
+        break;
+
+        case 5:
+        total = 7.32 * quantidade;
+        break;
+
+        default:
+        printf("Produto inexistente.");
+    }
+
+    printf("Valor a pagar: RS %.2lf\n", total);
+
+    return 0;
+}
+/* 4.10.Multiplos
+Fazer um programa para ler dois números inteiros, e dizer se um número
+é múltiplo do outro. Os números podem ser digitados em qualquer ordem. */
+
+
+#include <stdio.h>
+#include <stdlib.h>
+
+int main()
+{
+    int n1, n2;
+
+    printf("Digite dois numeros\n");
+    scanf("%d", &n1);
+    scanf("%d", &n2);
+
+        if (n1 % n2 == 0 || n2 % n1 == 0){
+            printf("\nSao multiplos.\n");
+        }
+        else{
+            printf("\nNao sao multiplos.\n");
+        }
+    return 0;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* 4.11.Aumento
+Uma empresa vai conceder um aumento percentual de salário aos seus
+funcionários dependendo de quanto cada pessoa ganha, conforme tabela
+ao lado. Fazer um programa para ler o salário de uma pessoa, daí mostrar
+qual o novo salário desta pessoa depois do aumento, quanto foi o aumento
+e qual foi a porcentagem de aumento.
+Salário atual 				             Aumento
+Até R$ 1000.00 				             20%
+Acima de R$ 1000.00 até R$ 3000.00 	    	15%
+Acima de R$ 3000.00 até R$ 8000.00 	    	10%
+Acima de R$ 8000.00 			              5%
+*/
+
+
+#include <stdio.h>
+#include <stdlib.h>
+
+int main()
+{
+    double salario, porcentagem, aumento, salarioNovo;
+
+    printf("Informe o salario atual: RS ");
+    scanf("%lf", &salario);
+
+    if (salario <= 1000){
+        porcentagem = 20;
+    }
+    else if (salario <= 3000){
+        porcentagem = 15;
+    }
+    else if (salario <= 8000){
+        porcentagem = 10;
+    }
+    else{
+        porcentagem = 5;
+    }
+
+    aumento = salario * porcentagem / 100;
+    salarioNovo = salario + aumento;
+
+    printf("\nNovo salario: RS %.2lf.\n", salarioNovo);
+    printf("\nO aumento foi de RS %.2lf corresponde a %.lf%%.\n", aumento, porcentagem);
+
+    return 0;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+/* 4.12.Tempo de Jogo
+Leia a hora inicial e a hora final de um jogo. A seguir calcule a duração
+do jogo, sabendo que o mesmo pode começar em um dia e terminar em outro,
+tendo uma duração mínima de 1 hora e máxima de 24 horas. */
+
+
+#include <stdio.h>
+#include <stdlib.h>
+
+int main()
+{
+    int h1, h2, duracao;
+
+    printf("Hora inicial: ");
+    scanf("%d", &h1);
+    printf("Hora final: ");
+    scanf("%d", &h2);
+    printf("\n");
+
+    if (h1 >= h2 && h1 + h2 <= 48){
+        duracao = (24 - h1) + h2;
+        printf("O JOGO DUROU %d HORAS.\n", duracao);
+    }
+    else if (h1 < h2 && h1 + h2 <= 48){
+        duracao = (24 - h1) + h2 - 24;
+        printf("O JOGO DUROU %d HORAS.\n", duracao);
+    }
+    else{
+        printf("IMPOSSIVEL DETERMINAR.\n", duracao);
+    }
+    return 0;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* 4.13.Coordenadas
+Leia os valores das coordenadas X e Y de um ponto no plano cartesiano.
+A seguir, determine qual o quadrante ao qual pertence o ponto (Q1, Q2,
+Q3 ou Q4). Se o ponto estiver na origem, escreva a mensagem “Origem”.
+Se o ponto estiver sobre um dos eixos escreva “Eixo X” ou “Eixo Y”,
+conforme for a situação. */
+
+
+#include <stdio.h>
+#include <stdlib.h>
+
+int main()
+{
+    double x, y;
+
+    printf("Atribua um valor para x e depois para y: \n");
+    scanf("%lf", &x);
+    scanf("%lf", &y);
+    printf("\n");
+
+    if (x > 0 && y > 0){
+        printf("Q1");
+    }
+    else  if (x < 0 && y > 0){
+        printf("Q2");
+    }
+    else  if (x < 0 && y < 0){
+        printf("Q3");
+    }
+    else  if (x > 0 && y < 0){
+        printf("Q4");
+    }
+    else  if (x == 0 && y != 0){
+        printf("Eixo Y");
+    }
+    else  if (x != 0 && y == 0){
+        printf("Eixo X");
+    }
+    else{
+        printf("Origem.");
+    }
+
+    printf("\n");
+
+    return 0;
+}
+
+
+
+
+
+
+
+
+
+
+
+/* 5.1.Crescente
+Leia uma quantidade indeterminada de duplas de valores inteiros X e Y.
+Escreva para cada X e Y uma mensagem que indique se estes valores
+foram digitados em ordem crescente ou decrescente. O programa deve
+finalizar quando forem digitados dois valores iguais. */
+
+
+#include <stdio.h>
+#include <stdlib.h>
+
+int main()
+{
+    int x, y;
+
+    printf("Digite dois numeros: \n");
+    scanf("%d", &x);
+    scanf("%d", &y);
+
+    while (x != y){
+        if(x < y){
+            printf("\nCrescente\n");
+        }
+        else{
+            printf("\nDecrescente\n");
+        }
+    printf("\nDigite dois numeros: \n");
+    scanf("%d", &x);
+    scanf("%d", &y);
+    }
+
+    return 0;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* 5.2.Media Idades
+Faça um programa para ler um número indeterminado de dados, contendo cada
+um, a idade de um indivíduo. O último dado, que não entrará nos cálculos,
+contém um valor de idade negativa. Calcular e imprimir a idade média deste
+grupo de indivíduos. Se for entrado um valor negativo na primeira vez,
+mostrar a mensagem "IMPOSSIVEL CALCULAR". */
+
+
+#include <stdio.h>
+#include <stdlib.h>
+
+int main()
+{
+    int idade, soma, i;
+    double media;
+
+    printf("Digite a idade: ");
+    scanf("%d", &idade);
+
+    i = 0;
+    soma = 0;
+
+    if(idade < 0 && i == 0){
+        printf("\nIMPOSSIVEL CALCULAR\n");
+    }
+    else{
+        while (idade > 0){
+            soma = soma + idade;
+            i = i + 1;
+            printf("\nDigite a idade: ");
+            scanf("%d", &idade);
+        }
+    media = (double) soma / i;
+    printf("\nMedia das idades: %.2lf \n", media);
+    }
+
+    return 0;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* 5.3.Senha fixa
+Escreva um programa que repita a leitura de uma senha até que ela seja
+válida. Para cada leitura de senha incorreta informada, escrever a
+mensagem "Senha Invalida! Tente novamente:". Quando a senha for informada
+corretamente deve ser impressa a mensagem "Acesso Permitido" e o algoritmo
+encerrado. Considere que a senha correta é o valor 2002. */
+
+
+#include <stdio.h>
+#include <stdlib.h>
+
+int main()
+{
+    int senha;
+
+    printf("Informe a senha: ");
+    scanf("%d", &senha);
+
+    while (senha != 2002){
+        printf("Senha invalida! Tente novamente: ");
+        scanf("%d", &senha);
+    }
+
+    printf("\nAcesso Permitido.\n");
+
+    return 0;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* 5.4.Quadrante
+Escreva um programa para ler as coordenadas (X,Y) de uma quantidade
+indeterminada de pontos no sistema cartesiano. Para cada ponto escrever
+o quadrante a que ele pertence (Q1, Q2, Q3 ou Q4). O algoritmo será
+encerrado quando pelo menos uma de duas coordenadas for NULA (nesta
+situação sem escrever mensagem alguma). */
+
+
+#include <stdio.h>
+#include <stdlib.h>
+
+int main()
+{
+    double x, y;
+
+    printf("Atribua um valor para x e depois para y: \n");
+    scanf("%lf", &x);
+    scanf("%lf", &y);
+
+    while (x != 0 && y != 0){
+        if (x > 0 && y > 0){
+            printf("QUADRANTE 1");
+        }
+        else  if (x < 0 && y > 0){
+            printf("QUADRANTE 2");
+        }
+        else  if (x < 0 && y < 0){
+            printf("QUADRANTE 3");
+        }
+        else {
+            printf("QUADRANTE 4");
+        }
+        printf("\n");
+        printf("\nAtribua um valor para x e depois para y: \n");
+        scanf("%lf", &x);
+        scanf("%lf", &y);
+        }
+
+    return 0;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* 5.5.Validacao de Nota
+Faça um programa que leia as notas referentes às duas avaliações de um
+aluno. Calcule e imprima a média semestral. Faça com que o algoritmo só
+aceite notas válidas (uma nota válida deve pertencer ao intervalo [0,10]).
+Cada nota deve ser validada separadamente. */
+
+
+#include <stdio.h>
+#include <stdlib.h>
+
+int main()
+{
+    double n1, n2, media;
+
+    printf("Informe a nota da primeira avaliacao: ");
+    scanf("%lf", &n1);
+    printf("\n");
+
+    while (n1 < 0 || n1 > 10){
+        printf("Valor Invalido! Tente novamente: \n");
+        scanf("%lf", &n1);
+        printf("\n");
+    }
+
+    printf("Informe a nota da segunda avaliacao: ");
+    scanf("%lf", &n2);
+    printf("\n");
+
+    while (n2 < 0 || n2 > 10){
+        printf("Valor Invalido! Tente novamente: \n");
+        scanf("%lf", &n2);
+        printf("\n");
+    }
+
+    media = (n1 + n2) / 2;
+
+    printf("MEDIA = %.2lf\n", media);
+
+    return 0;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* 5.6.Combustiveis
+Um posto de combustíveis deseja determinar qual de seus produtos tem a
+preferência de seus clientes. Escreva um algoritmo para ler o tipo de
+combustível abastecido (codificado da seguinte forma: 1.Álcool 2.Gasolina
+3.Diesel 4.Fim). Caso o usuário informe um código inválido (fora da faixa
+de 1 a 4) deve ser solicitado um novo código (até que seja válido).
+O programa será encerrado quando o código informado for o número 4, devendo
+então mostrar a mensagem "MUITO OBRIGADO", bem como as quantidades de
+cada combustível. */
+
+
+#include <stdio.h>
+#include <stdlib.h>
+
+int main()
+{
+    int cod, a, g, d;
+
+    printf("Informe um codigo (1,2,3) ou 4 para parar: ");
+    scanf("%d", &cod);
+
+    while (cod < 1 || cod < 4){
+        printf("Informe um codigo (1,2,3) ou 4 para parar: ");
+        scanf("%d", &cod);
+    }
+
+    a = 0;
+    g = 0;
+    d = 0;
+
+    while (cod != 4){
+        if (cod == 1){
+            a = a + 1;
+        }
+        else if (cod == 2){
+            g = g + 1;
+        }
+        else if (cod == 3){
+            d = d + 1;
+        }
+        printf("Informe um codigo (1,2,3) ou 4 para parar: ");
+        scanf("%d", &cod);
+    }
+
+    printf("\nMUITO OBRIGADO!\n");
+
+    printf("Alcool: %d\n", a);
+    printf("Gasolina: %d\n", g);
+    printf("Diesel: %d\n", d);
+
+    return 0;
+}
+
+
+
+
+
+/* 5.7.Pares Consecutivos
+ O programa deve ler um valor inteiro X indefinidas vezes. (O programa
+irá parar quando o valor de X for igual a 0). Para cada X lido, imprima
+a soma dos 5 pares consecutivos a partir de X, inclusive o X, se for par.
+Se o valor de entrada for 4, por exemplo, a saída deve ser 40, que é o
+resultado da operação: 4+6+8+10+12, enquanto que se o valor de entrada
+for 11, por exempo, a saída deve ser 80, que é a soma de 12+14+16+18+20. */
+
+
+#include <stdio.h>
+#include <stdlib.h>
+
+int main()
+{
+    int x, y, i, soma;
+
+    printf("Digite um numero: ");
+    scanf("%d", &x);
+
+    i = 0;
+    soma = 0;
+
+    while (x != 0){
+
+        if (x % 2 == 0){
+            while(i < 5){
+                soma = soma + x;
+                x = x + 2;
+                i = i + 1;
+            }
+        }
+        else{
+            y = x + 1;
+            while(i < 5){
+                soma = soma + y;
+                y = y + 2;
+                i = i + 1;
+            }
+        }
+        printf("\nSOMA: %d\n", soma);
+        printf("\n");
+        printf("\nDigite um numero:");
+        scanf("%d", &x);
+        i = 0;
+        y = 0;
+        soma = 0;
+
+    }
+    return 0;
+}
+
+
+
+
+
+
+
+/* 5.8.Tabuada
+Ler um número inteiro N, daí mostrar na tela a tabuada de N para 1 a 10,
+conforme exemplo. */
+
+
+#include <stdio.h>
+#include <stdlib.h>
+
+int main()
+{
+    int n, i, total;
+
+    printf("Deseja a tabuada para qual valor?\n");
+    scanf("%d", &n);
+    printf("\n");
+
+    for (i=1; i<=10; i++){
+        total = n * i;
+        printf("%d x %d = %d\n", n, i, total);
+    }
+
+    return 0;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* 5.9.Soma Impares
+Leia 2 valores inteiros X e Y (em qualquer ordem). A seguir, calcule e
+mostre a soma dos números ímpares entre eles. */
+
+
+#include <stdio.h>
+#include <stdlib.h>
+
+int main()
+{
+    int x, y, n1, n2, i, soma;
+
+    printf("Digite dois numeros:\n");
+    scanf("%d", &x);
+    scanf("%d", &y);
+
+    if (x < y){
+        n1 = x + 1;
+        n2 = y - 1;
+    }
+    else {
+        n1 = y + 1;
+        n2 = x - 1;
+    }
+
+    soma = 0;
+
+    for (i = n1; i <= n2; i++){
+        if (i % 2 != 0){
+            soma = soma + i;
+        }
+    }
+
+    printf("\nSOMA DOS IMPARES = %d\n", soma);
+
+    return 0;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* 5.10.Sequencia Impares
+Leia um valor inteiro X. Em seguida mostre os ímpares de 1 até X, um
+valor por linha, inclusive o X, se for o caso. */
+
+
+#include <stdio.h>
+#include <stdlib.h>
+
+int main()
+{
+    int x, n, i;
+
+    printf("Digite o valor de X: ");
+    scanf("%d", &x);
+
+    if(x != 0){
+        for(i = 1; i <= x; i++){
+            if (i % 2 != 0){
+                printf("%d\n", i);
+            }
+        }
+    }
+    else{
+        printf("Nao existe numero impar neste intervalo!");
+    }
+
+    return 0;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* 5.11.Dentro_Fora
+Leia um valor inteiro N. Este valor será a quantidade de valores inteiros
+X que serão lidos em seguida. Mostre quantos destes valores X estão dentro
+do intervalo [10,20] e quantos estão fora do intervalo, conforme exemplo. */
+
+
+#include <stdio.h>
+#include <stdlib.h>
+
+int main()
+{
+    int n, x, i, dentro, fora;
+
+    printf("Quantos numeros voce ira digitar?\n");
+    scanf("%d", &n);
+
+    dentro = 0;
+    fora = 0;
+    for (i = 1; i <= n; i++){
+        printf("Digite um numero: ");
+        scanf("%d", &x);
+        if (x >= 10 && x <= 20){
+            dentro = dentro +1;
+        }
+        else{
+            fora = fora + 1;
+        }
+    }
+
+    printf("%d DENTRO\n", dentro);
+    printf("%d FORA\n", fora);
+    return 0;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* 5.12.Par_Impar
+Leia um valor inteiro N. Este valor será a quantidade de números inteiros
+que serão lidos em seguida. Para cada valor lido, mostre uma mensagem
+dizendo se este valor lido é PAR ou IMPAR, e também se é POSITIVO ou
+NEGATIVO. No caso do valor ser igual a zero (0), seu programa deverá
+imprimir apenas NULO. */
+
+
+#include <stdio.h>
+#include <stdlib.h>
+
+int main()
+{
+    int n, i, x, par, impar, positivo, negativo;
+
+    printf("Quantos numeros serao digitados: ");
+    scanf("%d", &n);
+
+    for (i = 1; i <= n; i++){
+        printf("\n");
+        printf ("Digite um numero: ");
+        scanf("%d", &x);
+
+        if(x == 0){
+            printf("NULO\n");
+        }
+        else if(x % 2 == 0){
+            printf("PAR ");
+        }
+        else{
+            printf("IMPAR ");
+        }
+
+        if(x < 0){
+            printf("NEGATIVO\n");
+        }
+        else if (x > 0){
+            printf("POSITIVO\n");
+        }
+    }
+    return 0;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* 5.13.Media_Ponderada
+Leia um valor inteiro N, que representa o número de casos de teste que
+vem a seguir. Cada caso de teste consiste de 3 valores reais, para os
+quais você deverá calcular e mostrar a média ponderada, sendo que o
+primeiro valor tem peso 2, o segundo valor tem peso 3 e o terceiro valor
+tem peso 5. Vale lembrar que a média ponderada é a soma de todos os
+valores multiplicados pelo seu respectivo peso, dividida pela soma dos
+pesos. */
+
+
+#include <stdio.h>
+#include <stdlib.h>
+
+int main()
+{
+    int n, i;
+    double v1, v2, v3, media;
+
+    printf("Quantos casos voce ira calcular?\n");
+    scanf("%d", &n);
+    printf("\n");
+
+    for(i = 1; i <= n; i++){
+        printf("Informe os tres numeros:\n");
+        scanf("%lf", &v1);
+        scanf("%lf", &v2);
+        scanf("%lf", &v3);
+
+        media = ((v1*2)+(v2*3)+(v3*5)) / 10;
+
+        printf("\nMEDIA = %.1lf\n", media);
+        printf("\n");
+    }
+    return 0;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* 5.14.Divisao
+Escreva um algoritmo que leia dois números e imprima o resultado da
+divisão do primeiro pelo segundo. Caso não for possível, mostre a
+mensagem "DIVISAO IMPOSSIVEL". */
+
+
+#include <stdio.h>
+#include <stdlib.h>
+
+int main()
+{
+    int i, c;
+    double n, d, divisao;
+
+    printf("Quantos casos você vai calcular?\n");
+    scanf("%d", &c);
+    printf("\n");
+
+    for (i = 1; i <= c; i++){
+        printf("Entre com o numerador: ");
+        scanf("%lf", &n);
+        printf("Entre com o denominador: ");
+        scanf("%lf", &d);
+
+            if(d == 0){
+                printf("\nDIVISAO IMPOSSIVEL\n");
+                printf("\n");
+            }
+            else{
+                divisao = n / d;
+                printf("\nDIVISAO = %.2lf\n", divisao);
+                printf("\n");
+            }
+    }
+    return 0;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* 5.15.Fatorial
+Fazer um programa para ler um número natural N (valor máximo: 15), e
+depois calcular e mostrar o fatorial de N. */
+
+
+#include <stdio.h>
+#include <stdlib.h>
+
+int main()
+{
+    int n, i, f;
+
+    printf("Informe o numero a ser fatorado (valor maximo = 15): ");
+    scanf("%d", &n);
+
+    while (n < 0 || n > 15){
+        printf("Informe o numero a ser fatorado (valor maximo = 15): ");
+        scanf("%d", &n);
+    }
+
+    f = 1;
+    for(i = 1; i <= n; i++){
+        f = f * i;
+    }
+
+    printf("\nFATORIAL: %d\n", f);
+
+    return 0;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* 5.16.Experiencias
+Maria acabou de iniciar seu curso de graduação na faculdade de medicina
+e precisa de sua ajuda para organizar os experimentos de um laboratório
+o qual ela é responsável. Ela quer saber no final do ano, quantas cobaias
+foram utilizadas no laboratório e o percentual de cada tipo de cobaia
+utilizada. Este laboratório em especial utiliza três tipos de cobaias:
+sapos, ratos e coelhos. Para obter estas informações, ela sabe exatamente
+o número de experimentos que foram realizados, o tipo de cobaia utilizada
+e a quantidade de cobaias utilizadas em cada experimento. Faça um programa
+que leia um valor inteiro N que indica os vários casos de teste que vem a
+seguir. Cada caso de teste contém um inteiro que representa a quantidade
+de cobaias utilizadas e uma letra ('C', 'R' ou 'S'), indicando o tipo de
+cobaia (R:Rato S:Sapo C:Coelho). Apresente o total de cobaias utilizadas,
+o total de cada tipo de cobaia utilizada e o percentual de cada uma em
+relação ao total de cobaias utilizadas, sendo que o percentual deve ser
+apresentado com dois dígitos após o ponto. */
+
+
+#include <stdio.h>
+#include <stdlib.h>
+
+int main()
+{
+    char co, c, r, s;
+    int n, i, qt, qc, qr, qs;
+    double pc, pr, ps;
+
+    printf("Quantos testes serao digitados?  ");
+    scanf("%d", &n);
+
+    qc = 0;
+    qr = 0;
+    qs = 0;
+
+    for(i = 1; i <= n; i++){
+        printf("Quantidade de cobaias: ");
+        scanf("%d", &qt);
+        printf("Tipo de cobaia: ");
+        scanf("%s", &co);
+
+        if(co == 'c'){
+            qc = qc + qt;
+        }
+        else if(co == 'r'){
+            qr = qr + qt;
+        }
+        else if(co == 's'){
+            qs = qs + qt;
+        }
+        else{
+            i = i - 1;
+        }
+    }
+
+    qt = qc + qr + qs;
+    pc = (double)(qc * 100) / qt;
+    pr = (double)(qr * 100) / qt;
+    ps = (double)(qs * 100) / qt;
+
+    printf("\nTotal: %d\n cobaias.", qt);
+    printf("Total de Coelhos: %d\n", qc);
+    printf("Total de Ratos: %d\n", qr);
+    printf("Total de Sapos: %d\n", qs);
+    printf("Percentual de Coelhos: %.2lf\n", pc);
+    printf("Percentual de Ratos: %.2lf\n", pr);
+    printf("Percentual de Sapos: %.2lf\n", ps);
+
+    return 0;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* 6.1.Negativos
+Faça um programa que leia um número inteiro positivo N (máximo = 10) e
+depois N números inteiros e armazene-os em um vetor. Em seguida, mostrar
+na tela todos os números negativos lidos. */
+
+
+#include <stdio.h>
+#include <stdlib.h>
+
+int main()
+{
+    int n, i;
+
+    printf("Quantos numeros voce informara?\n");
+    scanf("%d", &n);
+    printf("\n");
+
+    int v[n];
+
+    for (i = 0; i < n; i++){
+        printf("Digite um numero: ");
+        scanf("%d", &v[i]);
+    }
+
+    printf("\nNUMEROS NEGATIVOS:\n");
+    for (i = 0; i < n; i++){
+        if (v[i] < 0){
+        printf("%.d\n", v[i]);
+        }
+    }
+    return 0;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* 6.2.Soma_Vetor
+Faça um programa que leia N números reais e armazene-os em um vetor.
+Em seguida:
+- Imprimir todos os elementos do vetor
+- Mostrar na tela a soma e a média dos elementos do vetor
+*/
+
+
+#include <stdio.h>
+#include <stdlib.h>
+
+int main()
+{
+    int n, i;
+    double soma, media;
+
+    printf("Quantos numeros voce informara?\n");
+    scanf("%d", &n);
+    printf("\n");
+
+    double v[n];
+
+    for (i = 0; i < n; i++){
+        printf("Digite um numero: ");
+        scanf("%lf", &v[i]);
+    }
+
+    printf("\nVALORES ");
+    for (i = 0; i < n; i++){
+        printf("%.1lf   ", v[i] );
+    }
+
+    soma = 0;
+    for(i = 0; i < n; i++){
+        soma = soma + v[i];
+    }
+    printf("\n");
+    printf("\nSOMA = %.2lf\n", soma);
+
+    media = soma / n;
+    printf("\nMEDIA = %.2lf\n", media);
+
+    return 0;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* 6.3.Alturas
+Fazer um programa para ler nome, idade e altura de N pessoas, conforme
+exemplo. Depois, mostrar na tela a altura média das pessoas, e mostrar
+também a porcentagem de pessoas com menos de 16 anos, bem como os nomes
+dessas pessoas caso houver. */
+
+
+#include <stdio.h>
+#include <stdlib.h>
+
+int main()
+{
+    int n, i, p;
+    double soma, altMedia, per;
+
+    printf("Quantas pessoas serao registradas?\n");
+    scanf("%d", &n);
+
+    char nome[n][50];
+    int idade[n];
+    double altura[n];
+
+    for (i = 0; i < n; i++){
+        printf("\n");
+        printf("Dados da %d.a pessoa: \n", i+1);
+        printf("Nome: ");
+        fseek(stdin, 0, SEEK_END);
+        gets(nome[i]);
+        printf("Idade: ");
+        scanf("%d", &idade[i]);
+        printf("Altura: ");
+        scanf("%lf", &altura[i]);
+    }
+
+    soma = 0;
+    for (i = 0; i < n; i++){
+        soma = soma + altura[i];
+    }
+    altMedia = soma / n;
+    printf("\nAltura Media das pessoas registradas: %.2lf\n", altMedia);
+
+    p = 0;
+    for (i = 0; i < n; i++){
+        if (idade[i] < 16){
+            p = p + 1;
+        }
+    }
+    per = (double) (p * 100) / n;
+    printf("Percentual de menores de 16: %.1lf %%\n", per);
+
+    for (i = 0; i < n; i++){
+        if (idade[i] < 16){
+            printf("%s\n", nome[i]);
+        }
+    }
+    return 0;
+}
+/* 6.4.Numeros_Pares
+Faça um programa que leia N números inteiros e armazene-os em um vetor.
+Em seguida, mostre na tela todos os números pares, e também a quantidade
+de números pares. */
+
+
+#include <stdio.h>
+#include <stdlib.h>
+
+int main()
+{
+    int n, i, soma;
+    double par;
+
+    printf("Quantos numeros voce ira digitar?");
+    scanf("%d", &n);
+
+    int v[n];
+
+    for(i = 0; i < n; i++){
+        printf("Digite um numero: ");
+        scanf("%d", &v[i]);
+    }
+    printf("\n");
+
+    soma = 0;
+
+    for(i = 0; i < n; i++){
+        if (v[i] % 2 == 0){
+            printf("%d  ", v[i]);
+            soma = soma + 1;
+        }
+    }
+    printf("\n");
+    printf("\nQuantidade de Pares: %lf", soma);
+
+    return 0;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* 6.5.Maior_Posicao
+Faça um programa que leia N números reais e armazene-os em um vetor.
+Em seguida, mostrar na tela o maior número do vetor (supor não haver
+empates). Mostrar também a posição do maior elemento, considerando a
+primeira posição como 0 (zero). */
+
+
+#include <stdio.h>
+#include <stdlib.h>
+
+int main()
+{
+    int n, i, posicao;
+    double maior;
+
+    printf("Quantos numeros voce ira digitar?\n");
+    scanf("%d", &n);
+
+    double v[n];
+
+    for (i = 0; i < n; i++){
+        printf("Informe um numero: ");
+        scanf("%lf", &v[i]);
+    }
+
+    maior = 0;
+    posicao = 0;
+
+    for (i = 0; i < n; i++){
+        if (v[i] > maior){
+            maior = v[i];
+            posicao = i;
+        }
+    }
+
+    printf("\nMaior Valor = %.1lf \n", maior);
+    printf("\nPosicao do Maior Valor: %d\n", posicao);
+
+    return 0;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* 6.6.Soma_Vetores
+Faça um programa para ler dois vetores A e B, contendo N elementos cada.
+Em seguida, gere um terceiro vetor C onde cada elemento de C é a soma dos
+elementos correspondentes de A e B. Imprima o vetor C gerado. */
+
+
+#include <stdio.h>
+#include <stdlib.h>
+
+int main()
+{
+    int n, i;
+
+    printf("Quantos valores tera cada vetor?\n");
+    scanf("%d", &n);
+
+    double a[n];
+    double b[n];
+    double c[n];
+
+    printf ("Informe o(s) valor(es) para o vetor A: \n");
+    for(i = 0; i < n; i++){
+        scanf("%lf", &a[i]);
+    }
+
+    printf ("Informe o(s) valor(es) para o vetor B: \n");
+    for(i = 0; i < n; i++){
+        scanf("%lf", &b[i]);
+    }
+
+    printf ("VETOR RESULTANTE: \n");
+    for(i = 0; i < n; i++){
+        c[i] = a[i] + b[i];
+        printf("%.2lf\n", c[i]);
+    }
+    return 0;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+/* 6.7.Abaixo_da_Media
+Fazer um programa para ler um número inteiro N e depois um vetor de N
+números reais. Em seguida, mostrar na tela a média aritmética de todos
+elementos com três casas decimais. Depois mostrar todos os elementos
+do vetor que estejam abaixo da média, com uma casa decimal cada. */
+
+
+
+#include <stdio.h>
+#include <stdlib.h>
+
+int main()
+{
+    int n, i;
+    double media, soma;
+
+    printf("Quantas notas voce ira informar? \n");
+    scanf("%d", &n);
+
+    double v[n];
+
+    for (i = 0; i < n; i++){
+        printf("Informe a %da nota: ", i+1);
+        scanf("%lf", &v[i]);
+    }
+
+    soma = 0;
+        for (i = 0; i < n; i++){
+        soma = soma + v[i];
+    }
+
+    media = 0;
+    media = soma / n;
+    printf("\nMEDIA: %.3lf\n", media);
+
+    printf("\nElementos ABAIXO da Media: \n");
+    for (i = 0; i < n; i++){
+        if (v[i] < media){
+            printf("%.1lf\n", v[i]);
+        }
+    }
+
+    return 0;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* 6.8.Media_Pares
+Fazer um programa para ler um vetor de N números inteiros. Em seguida,
+mostrar na tela a média aritmética somente dos números pares lidos, com
+uma casa decimal. Se nenhum número par for digitado, mostrar a mensagem
+"NENHUM NUMERO PAR"  */
+
+
+#include <stdio.h>
+#include <stdlib.h>
+
+int main()
+{
+    int n, i, contp;
+    double soma, media;
+
+    printf("Quantos numeros serao digitados: ");
+    scanf("%d", &n);
+    printf("\n");
+
+    int v[n];
+
+    for (i = 0; i < n; i++){
+        printf ("Digite um numero: ");
+        scanf("%d", &v[i]);
+    }
+
+    soma = 0;
+    contp = 0;
+    for (i = 0; i < n; i++){
+        if (v[i] % 2 == 0){
+            soma = soma + v[i];
+            contp = contp + 1;
+        }
+    }
+
+    if (contp == 0){
+        printf("\nNENHUM NUMERO PAR\n");
+    }
+    else{
+        media = soma / contp;
+        printf("\nMEDIA DOS PARES: %.1lf\n", media);
+    }
+    return 0;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* 6.9.Mais_Velho
+Fazer um programa para ler um conjunto de nomes de pessoas e suas
+respectivas idades. Os nomes devem ser armazenados em um vetor, e as
+idades em um outro vetor. Depois, mostrar na tela o nome da pessoa mais
+velha. */
+
+
+#include <stdio.h>
+#include <stdlib.h>
+
+int main()
+{
+    int n, i, major, older;
+
+
+    printf("How many people are you inform?   ");
+    scanf("%d", &n);
+
+    int age[n];
+    char name[n][50];
+
+    for (i = 0; i < n; i++){
+        printf("\n%dst Name: ", i+1);
+        fseek(stdin, 0, SEEK_END);
+        gets(name[i]);
+        printf("Age: ");
+        scanf("%d", &age[i]);
+    }
+
+    major = 0;
+
+    for (i = 0; i < n; i++){
+        if (age[i] > major){
+            major = age[i];
+            older = i;
+        }
+    }
+
+    printf("\n\nOLDER PERSON: %s\n\n", name[older]);
+
+    return 0;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* 6.10.Aprovados
+Fazer um programa para ler um conjunto de N nomes de alunos, bem como as
+notas que eles tiraram no 1º e 2º semestres. Cada uma dessas informações
+deve ser armazenada em um vetor. Depois, imprimir os nomes dos alunos
+aprovados, considerando aprovados aqueles cuja média das notas seja maior
+ou igual a 6.0 (seis). */
+
+
+#include <stdio.h>
+#include <stdlib.h>
+
+int main()
+{
+    int n, i;
+
+    printf("Inform the quantity of students: ");
+    scanf("%d", &n);
+
+    char name[n][50];
+    double grade1[n], grade2[n], m[n];
+
+    for(i = 0; i < n; i++){
+        printf("\nInform the Name and the semester's grades:\n");
+        fseek(stdin, 0, SEEK_END);
+        gets(name[i]);
+        scanf("%lf", &grade1[i]);
+        scanf("%lf", &grade2[i]);
+    }
+
+    for(i = 0; i < n; i++){
+        m[i] = (double)((grade1[i] + grade2[i]) / 2.0);
+    }
+
+    printf("\n APPROVED STUDENTS:\n");
+    for(i = 0; i < n; i++){
+        if (m[i] >= 6){
+            printf("%s\n", name[i]);
+        }
+    }
+    return 0;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* 6.11.Dados_Pessoas
+Tem-se um conjunto de dados contendo a altura e o gênero (M, F) de N
+pessoas. Fazer um programa que calcule e escreva a maior e a menor altura
+do grupo, a média de altura das mulheres, e o número de homens. */
+
+
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+
+int main()
+{
+    int n, i, conWomen, qMen;
+    double media, hWomen, bigger, smaller;
+
+    printf ("How many people will be informed?\n");
+    scanf ("%d", &n);
+
+    double height[n];
+    char gender[n];
+
+    for (i = 0; i < n; i++)
+    {
+        printf ("\n%dst person height: ", i+1);
+        scanf ("%lf", &height[i]);
+        printf ("%dst person gender: ", i+1);
+        fseek(stdin, 0, SEEK_END);
+        scanf ("%c", &gender[i]);
+    }
+
+    bigger = height[0];
+    smaller = height[0];
+
+    for (i = 0; i < n; i++)
+    {
+        if (height[i] > bigger)
+        {
+            bigger = height[i];
+        }
+        if (height[i] < smaller)
+        {
+            smaller = height[i];
+        }
+    }
+
+    printf ("\nSmaller Height: %.2lf", smaller);
+
+    printf ("\nBigger Height: %.2lf", bigger);
+
+    conWomen = 0;
+    hWomen = 0;
+    qMen = 0;
+    for (i = 0; i < n; i++)
+    {
+        if (gender[i] == 'f' || gender[i] == 'F')
+        {
+            conWomen = conWomen + 1;
+            hWomen = hWomen + height[i];
+        }
+        else
+        {
+            qMen = qMen + 1;
+        }
+    }
+
+    if (conWomen == 0)
+    {
+        printf ("\nNo Women informed.\n");
+    }
+    else
+    {
+        media = hWomen / conWomen;
+        printf ("\nWomen Height's Media: %.2lf\n", media);
+    }
+
+    printf ("\nQuantity of Men: %d\n", qMen);
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* 6.12.Comerciante
+Um comerciante deseja fazer o levantamento do lucro das mercadorias que
+ele comercializa. Para isto, mandou digitar um conjunto de N mercadorias,
+cada uma contendo nome, preco de compra e preco de venda das mesmas.
+Fazer um programa que leia tais dados e determine e escreva quantas
+mercadorias proporcionaram:
+* lucro < 10%
+* 10% <= lucro <= 20%
+* lucro > 20%
+Determine e escreva tambem o valor total de compra e de venda de todas
+as mercadorias, assim como o lucro total. */
+
+
+#include <stdio.h>
+#include <stdlib.h>
+
+int main()
+{
+    int n, i, lAte10, lAte20, lAcima20;
+    double tCompra, tVenda, lTotal;
+
+    printf ("Quantos produtos serao informados?\n");
+    scanf ("%d", &n);
+
+    char produto[n][50];
+    double pCompra[n], pVenda[n], lucro[n];
+
+    for (i = 0; i < n; i++) {
+        printf ("\nProduto %d: ", i+1);
+        printf ("\nNome: ");
+        fseek (stdin, 0, SEEK_END);
+        gets (produto[i]);
+        printf ("Preco de Compra: ");
+        scanf ("%lf", &pCompra[i]);
+        printf ("Preco de Venda: ");
+        scanf ("%lf", &pVenda[i]);
+    }
+
+    lAte10 = 0;
+    lAte20 = 0;
+    lAcima20 = 0;
+
+    for (i = 0; i < n; i++) {
+        lucro[i] = ((pVenda[i] / pCompra[i]) - 1) * 100;
+        if (lucro[i] < 10) {
+            lAte10 = lAte10 + 1;
+        }
+        else if (lucro[i] <= 20) {
+            lAte20 = lAte20 + 1;
+        }
+        else {
+            lAcima20 = lAcima20 + 1;
+        }
+    }
+
+    tCompra = 0;
+    tVenda = 0;
+
+    for (i = 0; i < n; i++) {
+        tCompra = tCompra + pCompra[i];
+        tVenda = tVenda + pVenda[i];
+    }
+
+    lTotal = tVenda - tCompra;
+
+    printf ("\nProdutos com lucro abaixo de 10%%: %d\n", lAte10);
+    printf ("Produtos com lucro entre 10%% a 20%%: %d\n", lAte20);
+    printf ("Produtos com lucro acima de 20%%: %d\n", lAcima20);
+    printf ("Total de Compras: %.2lf\n", tCompra);
+    printf ("Total de Vendas: %.2lf\n", tVenda);
+    printf ("Lucro Total: %.2lf\n", lTotal);
+
+    return 0;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* 7.1.Diagonal_Negativos
+Fazer um programa para ler um número inteiro N (máximo = 10) e uma matriz
+quadrada de ordem N contendo números inteiros. Em seguida, mostrar a
+diagonal principal e a quantidade de valores negativos da matriz. */
+
+
+#include <stdio.h>
+#include <stdlib.h>
+
+int main()
+{
+    int n, i, j, negativo;
+
+    printf("Qual a ordem da matriz?\n");
+    scanf("%d", &n);
+    printf("\n");
+
+    int mat[n][n];
+
+    for (i = 0; i < n; i++){
+        for (j = 0; j < n; j++){
+            printf("Elemento [%d,%d]: ", i, j);
+            scanf("%d", &mat[i][j]);
+        }
+    }
+
+    printf("\n");
+    printf("Diagonal Principal: \n");
+    for (i = 0; i < n; i++){
+        printf("%d  ", mat[i][i]);
+        }
+    printf("\n");
+
+    negativo = 0;
+    for (i = 0; i < n; i++){
+        for (j = 0; j < n; j++){
+            if (mat[i][j] < 0){
+                negativo = negativo + 1;
+            }
+        }
+    }
+    printf("Quantidade de Negativos = %d\n\n", negativo);
+
+    return 0;
+
+}
+
+
+
+
+
+
+
+
+
+
+
+/* 7.2.Soma_Linhas
+Fazer um programa para ler dois números inteiros M e N (máximo = 10). Em seguida,
+ler uma matriz de M linhas e N colunas contendo números reais. Gerar um
+vetor de modo que cada elemento do vetor seja a soma dos elementos da
+linha correspondente da matriz. Mostrar o vetor gerado. */
+
+
+#include <stdio.h>
+#include <stdlib.h>
+
+int main()
+{
+    int m, n, i, j;
+
+    printf("Qual sera a quantidade de linhas da matriz?   ");
+    scanf("%d", &n);
+    printf("Qual sera a quantidade de colunas da matriz?   ");
+    scanf("%d", &m);
+    printf("\n");
+
+    double mat[n][m], v[n];
+
+    for(i=0; i<n; i++){
+        printf("Digite os elementos da %da linha: \n", i+1);
+        for(j=0; j<m; j++){
+            scanf("%lf", &mat[i][j]);
+        }
+    }
+
+    for(i=0; i<n; i++){
+        v[i]=0;
+        for(j=0; j<m; j++){
+            v[i] = v[i] + mat[i][j];
+        }
+    }
+
+    printf("\nVetor Gerado: \n");
+    for(i=0; i<n; i++){
+        printf("%.1lf\n", v[i]);
+    }
+    return 0;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* 7.3.Negativos_Matriz
+Ler dois números M e N (máximo = 10), e depois ler uma matriz MxN de
+números inteiros, conforme exemplo. Em seguida, mostrar na tela somente
+os números negativos da matriz. */
+
+
+#include <stdio.h>
+#include <stdlib.h>
+
+int main()
+{
+    int m, n, i, j;
+
+    printf("Qual sera a quantidade de linhas da matriz?   ");
+    scanf("%d", &n);
+    printf("Qual sera a quantidade de colunas da matriz?   ");
+    scanf("%d", &m);
+    printf("\n");
+
+    double mat[n][m], v[n];
+
+    for(i=0; i<n; i++){
+        printf("Digite os elementos da %da linha: \n", i+1);
+        for(j=0; j<m; j++){
+            scanf("%lf", &mat[i][j]);
+        }
+    }
+
+    for(i=0; i<n; i++){
+        v[i]=0;
+        for(j=0; j<m; j++){
+            v[i] = v[i] + mat[i][j];
+        }
+    }
+
+    printf("\nVetor Gerado: \n");
+    for(i=0; i<n; i++){
+        printf("%.1lf\n", v[i]);
+    }
+    return 0;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* 7.4.Cada_Linha
+Ler um inteiro N e uma matriz quadrada de ordem N (máximo = 10). Mostrar
+qual o maior elemento de cada linha. Suponha não haver empates. */
+
+
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+
+int main ()
+{
+
+    int n, i, j, maior;
+
+    printf ("Qual a ordem da matriz?  ");
+    scanf ("%d", &n);
+
+    int mat[n][n], v[n];
+
+    for (i = 0; i < n; i++) {
+        for (j = 0; j < n; j++) {
+            printf ("Elemento [%d,%d]: ", i, j);
+            scanf ("%d", &mat[i][j]);
+        }
+    }
+
+    printf ("\nMAIOR ELEMENTO DE CADA LINHA:\n");
+    for (i = 0; i < n; i++) {
+        maior = 0;
+        for (j = 0; j < n; j++) {
+            if (maior < mat[i][j]) {
+                maior = mat[i][j];
+            }
+        }
+        printf ("%d\n", maior);
+    }
+
+    printf("\n");
+    return 0;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* 7.5.Soma_Matrizes
+Fazer um programa para ler duas matrizes de números inteiros A e B,
+contendo de M linhas e N colunas cada (M e N máximo = 10). Depois,
+gerar uma terceira matriz C onde cada elemento desta é a soma dos
+elementos correspondentes das matrizes originais. Imprimir na tela a
+matriz gerada. */
+
+
+#include <stdio.h>
+#include <stdlib.h>
+
+int main()
+{
+    int n, m, i, j;
+
+    printf ("Quantas linhas tera a cada matriz?  ");
+    scanf ("%d", &n);
+    printf ("Quantas colunas tera a cada matriz?  ");
+    scanf ("%d", &m);
+
+    int A[n][m], B[n][m], C[n][m];
+
+    printf ("\nDigite os valores da matriz A\n");
+    for (i = 0; i < n; i++) {
+        for (j = 0; j < m; j++) {
+            printf ("Elemento [%d,%d]: ", i, j);
+            scanf ("%d", &A[i][j]);
+        }
+    }
+
+    printf ("\nDigite os valores da matriz B\n");
+    for (i = 0; i < n; i++) {
+        for (j = 0; j < m; j++) {
+            printf ("Elemento [%d,%d]: ", i, j);
+            scanf ("%d", &B[i][j]);
+        }
+    }
+
+    for (i = 0; i < n; i++) {
+        for (j = 0; j < m; j++) {
+            C[i][j] = A[i][j] + B[i][j];
+        }
+    }
+
+    printf ("\n\nMATRIZ SOMA:\n");
+    for (i = 0; i < n; i++) {
+        for (j = 0; j < m; j++) {
+            printf ("%d   ", C[i][j]);
+        }
+        printf ("\n");
+    }
+
+    return 0;
+}
+
+
+
+/* 7.6.Acima_Diagonal
+Ler um inteiro N (máximo = 10) e uma matriz quadrada de ordem N contendo
+números inteiros. Mostrar a soma dos elementos acima da diagonal principal.
+Um exemplo de números acima da diagonal principal é mostrado ao lado
+(no caso as células com fundo cinza). */
+
+
+#include <stdio.h>
+#include <stdlib.h>
+
+int main() {
+
+        int n, i, j, soma;
+
+        printf ("Qual a ordem da matriz?  ");
+        scanf ("%d", &n);
+
+        int mat[n][n];
+
+        for (i = 0; i < n; i++) {
+            for (j = 0; j < n; j++) {
+                printf ("Elemento [%d, %d]:  ", i, j);
+                scanf ("%d", &mat[i][j]);
+            }
+        }
+
+        soma = 0;
+        for (i = 0; i < n; i++) {
+            for (j = i+1; j < n; j++) {
+                soma = soma + mat[i][j];
+            }
+        }
+
+        printf ("\nSOMA DOS ELEMENTOS ACIMA DA DIAGONAL PRINCIAL: %d\n\n", soma);
+
+    return 0;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* 7.7.Matriz_Geral
+Ler uma matriz quadrada de ordem N (máximo = 10), contendo números reais.
+Em seguida, fazer as seguintes ações:
+a) calcular e imprimir a soma de todos os elementos positivos da matriz.
+b) fazer a leitura do índice de uma linha da matriz e, daí, imprimir
+todos os elementos desta linha.
+c) fazer a leitura do índice de uma coluna da matriz e, daí, imprimir
+todos os elementos desta coluna.
+d) imprimir os elementos da diagonal principal da matriz.
+e) alterar a matriz elevando ao quadrado todos os números negativos da
+mesma. Em seguida imprimir a matriz alterada. */
+
+
+#include <stdio.h>
+#include <stdlib.h>
+
+int main()
+{
+    int n, i, j, linha, coluna;
+    double soma;
+
+    printf ("Qual a ordem da matriz?  ");
+    scanf ("%d", &n);
+
+    double mat[n][n];
+
+    for (i = 0; i < n; i++) {
+        for (j = 0; j < n; j++) {
+            printf ("Elemento [%d, %d]: ", i, j);
+            scanf ("%lf", &mat[i][j]);
+        }
+    }
+
+    soma = 0;
+    for (i = 0; i < n; i++) {
+        for (j = 0; j < n; j++) {
+            if (mat[i][j] > 0) {
+                soma = soma + mat[i][j];
+            }
+        }
+    }
+    printf ("\nSOMA DOS POSITIVOS: %.1lf", soma);
+
+    printf ("\n\nEscolha uma linha: ");
+    scanf ("%d", &linha);
+    printf ("Linha Escolhida: ");
+    for (j = 0; j < n; j++) {
+        printf ("%.1lf  ", mat[linha][j]);
+    }
+
+    printf ("\n\nEscolha uma coluna: ");
+    scanf ("%d", &coluna);
+    printf ("Coluna Escolhida: ");
+    for (i = 0; i < n; i++) {
+        printf ("%.1lf  ", mat[i][coluna]);
+    }
+
+    printf ("\n\nDiagonal Principal: ");
+    for (i = 0; i < n; i++) {
+        printf ("%.1lf  ", mat[i][i]);
+    }
+
+    for (i = 0; i < n; i++) {
+        for (j = 0; j < n; j++) {
+            if (mat[i][j] < 0) {
+                mat[i][j] = pow(mat[i][j],2);
+            }
+        }
+    }
+
+    printf ("\n\nMATRIZ ALTERADA:\n");
+    for (i = 0; i < n; i++) {
+        for (j = 0; j < n; j++) {
+            printf ("%.1lf  ", mat[i][j]);
+        }
+    printf("\n");
+    }
+
+    printf("\n\n");
+    return 0;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
